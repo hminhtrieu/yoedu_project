@@ -23,7 +23,7 @@ public class CourseController {
         return ResponseEntity.ok(ApiResponse.success(courseService.findAll()));
     }
 
-    @GetMapping("/course/{id}")
+    @GetMapping("{id}")
     public ResponseEntity<ApiResponse<Course>> getCourseById(Long id)
     {
 //        return courseService.findById(id).map(value -> ResponseEntity.ok(ApiResponse.success(value)))

@@ -18,6 +18,6 @@ public class Course extends AuditableEntity {
     private double tuitionFee;
 
     private int totalSessions;
-    @Column(columnDefinition = "tinyint")
+    @Column(columnDefinition = "tinyint(1)")
     private boolean isActive;
 }

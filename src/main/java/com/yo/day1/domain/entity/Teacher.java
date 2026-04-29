@@ -1,5 +1,6 @@
 package com.yo.day1.domain.entity;
 
+import com.yo.day1.domain.AuditableEntity;
 import com.yo.day1.domain.enums.TeacherRole;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -7,10 +8,7 @@ import lombok.Data;
 @Entity
 @Data
 @Table(name = "teachers")
-public class Teacher {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+public class Teacher extends AuditableEntity {
     @Column(name = "teacher_code", columnDefinition = "varchar(20)")
     private String teacherCode;
 

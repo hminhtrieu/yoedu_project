@@ -21,12 +21,6 @@ public class HomeController {
         return ResponseEntity.ok("\"data\": \"This is my content\"");
     }
 
-
-    @GetMapping(value = "/students")
-    public ResponseEntity<List<Student>> findAll()
-    {
-        return ResponseEntity.ok(studentService.findAll());
-    }
 }
 
 

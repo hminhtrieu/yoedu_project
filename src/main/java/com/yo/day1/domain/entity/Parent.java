@@ -1,9 +1,13 @@
 package com.yo.day1.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.yo.day1.domain.AuditableEntity;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Data
@@ -20,4 +24,8 @@ public class Parent extends AuditableEntity {
 
     @Column(columnDefinition = "varchar(255)")
     private String address;
+
+    @OneToMany(mappedBy = "parent")
+    @JsonIgnore
+    private Set<Student> students;
 }

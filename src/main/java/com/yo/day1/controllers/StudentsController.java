@@ -36,7 +36,7 @@ public class StudentsController {
     }
 
     @PostMapping
-    public ResponseEntity<StudentResponse> create(StudentUpsertRequest request)
+    public ResponseEntity<StudentResponse> create(@Valid @RequestBody StudentUpsertRequest request)
     {
         return ResponseEntity.ok(studentService.create(request));
     }

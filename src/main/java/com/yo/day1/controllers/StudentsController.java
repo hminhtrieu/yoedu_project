@@ -50,7 +50,7 @@ public class StudentsController {
     public ResponseEntity<?> delete(@PathVariable Long id)
     {
        studentService.delete(id);
-       return ResponseEntity.ok().build();
+       return ResponseEntity.ok("Xoa Student Thanh Cong");
     }
 }
 
